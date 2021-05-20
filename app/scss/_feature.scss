@@ -1,0 +1,42 @@
+.feature {
+  position: relative;
+
+  &__image {
+    max-width: 100%;
+    margin-top: 6.25rem;
+    margin-bottom: 3rem;
+
+    @include breakpoint-up(medium) {
+      width: 45.625rem; //730px
+    }
+  }
+
+  &__intro {
+    margin-bottom: 6.25rem;
+
+    > p {
+      line-height: 1.5;
+      color: $darkGray;
+      text-align: center;
+    }
+
+    @include breakpoint-up(medium) {
+      position: absolute;
+      width: 31.25rem; //500px
+      right: 0;
+      bottom: -3rem;//-48px
+      background-color: $white;
+      padding: 4.25rem 1.5rem 0 6rem;//68px 96px
+
+      >h2 {
+        text-align: left;
+      }
+
+      >p {
+        text-align: left;
+        margin-bottom: 0;
+      }
+      
+    }
+  }
+}

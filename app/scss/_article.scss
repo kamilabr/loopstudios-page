@@ -1,0 +1,97 @@
+.article {
+  @include breakpoint-up(large) {
+    margin-top: 6.25rem;//100px
+  }
+
+  @include breakpoint-up(large) {
+    position: relative;//to arrange the button
+  }
+
+
+  h2 {
+    @include breakpoint-up(large) {
+      text-align: left;
+    }
+  }
+    
+
+  &__box {
+    
+    @include breakpoint-up(medium) {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: center;
+      gap: 14px;
+    }
+  }
+
+  &__item {
+    position: relative;
+
+    @include breakpoint-up(large) {
+      &:hover {
+        opacity: 0.5; 
+        color: black;
+        }
+    } 
+    
+  }
+
+  &__image {
+
+      & * {//selects all children
+
+        @include breakpoint-down(small) {
+          width: 100%;
+          margin-bottom: 1.5rem;
+        }
+
+        @include breakpoint-up(medium) {
+          height: 450px;
+          width: 255px;
+        }
+      }
+  }
+
+  &__caption {
+    position: absolute;
+    bottom: 0;
+    left: 1.5rem;
+    }
+
+  &__wrapper {
+    position: relative;
+    height: 6.875rem;
+
+    @include breakpoint-up(large) {
+      position: absolute;
+      top: -50px;
+      right: 113px;
+    }
+  }
+
+  &__button {
+    position: absolute;
+    font-family: "Josefin Sans", sans-serif;
+    text-align: center;
+    text-transform: uppercase;
+    white-space: nowrap;
+    //width: 2.5rem;
+    border: 1px solid;
+    padding: 10px 50px;
+    background-color: $white;
+    letter-spacing: 3px;
+    font-weight: bold;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transition: all 300ms ease-in-out;
+
+    &:hover {
+      color: $white;
+      background-color: $black;
+    }
+
+  }
+}
